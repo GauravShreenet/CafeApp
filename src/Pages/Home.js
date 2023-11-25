@@ -1,12 +1,12 @@
 import React from 'react'
-import backGround from '../Asset/cafeback.png'
-import { Container, Image } from 'react-bootstrap'
+import { Hero } from '../Component/Hero'
 
 const Home = () => {
     return (
         <>
+            <Hero />
             <div>
-                <Image src={backGround} alt="" fluid/>
+                
             </div>
         </>
 
