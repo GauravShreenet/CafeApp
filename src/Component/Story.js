@@ -1,7 +1,15 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Image, Row } from 'react-bootstrap'
+import firstImg from '../Asset/menuOne.png'
+import secondImg from '../Asset/menuTwo.png'
+import thirdImg from '../Asset/menuThree.png'
+import forthImg from '../Asset/menuFour.png'
+
 
 export const Story = () => {
+
+    const imageMenu = [firstImg, secondImg, thirdImg, forthImg];
+
   return (
     <>
         <Container className='mt-5'>
@@ -16,9 +24,13 @@ export const Story = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div>
-                        
-                    </div>
+                    <Row>
+                        {imageMenu.map((imageMenu, i)=>(
+                            <Col sm={6} md={4} lg={6} xl={6} key={i}>
+                                <Image src={imageMenu} alt={`Image ${i}`} fluid className='mb-3'/>
+                            </Col>
+                        ))}
+                    </Row>
                 </Col>
             </Row>
             
