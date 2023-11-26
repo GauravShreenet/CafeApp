@@ -18,8 +18,7 @@ export const Hero = () => {
         </div>
         
       </div>
-      <div className='d-flex justify-content-center'>
-        <div className='d-flex justify-content-between text-light' style={{ width: '30%', position: 'absolute', top: '150%', left: '15%' }}>
+      <div className='d-flex justify-content-between text-light' style={{ width: '20%', position: 'absolute', top: '160%', left: '42%' }}>
           <div className="d-flex flex-column fw-bold">
             <span style={{ fontSize: '2.5vh' }}>Monday to Firday</span>
             <span style={{ fontSize: '2.5vh' }}>Saturday</span>
@@ -32,8 +31,6 @@ export const Hero = () => {
             <span style={{ fontSize: '2.5vh' }}>9am - 3pm</span>
           </div>
         </div>
-      </div>
-      
     </div>
 
   )
