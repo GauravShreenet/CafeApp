@@ -61,7 +61,6 @@ export const Hero = () => {
 
         </div>
       </div>
-      asdsadasdasdas
     </>
 
 
