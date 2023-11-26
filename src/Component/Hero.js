@@ -18,7 +18,7 @@ export const Hero = () => {
               <span style={{ fontSize: '2.5vh'}}>Saturday</span>
               <span style={{ fontSize: '2.5vh'}}>Sunday</span>
             </div>
-            <div />
+            <div style={{background: 'white', width: '0.5vh'}}/>
             <div className="d-flex flex-column text-light fw-bold">
               <span style={{ fontSize: '2.5vh'}}>8am - 3pm</span>
               <span style={{ fontSize: '2.5vh'}}>8am - 3pm</span>
