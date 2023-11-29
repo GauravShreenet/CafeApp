@@ -18,9 +18,9 @@ export const Story = () => {
     <>
         <Container className='my-5 overflow-hidden'>
             <Row>
-                <Col style={{height: '60vh'}}>
+                <Col className='me-5 mt-5' style={{height: '60vh'}}>
                     <div style={{ fontSize: '5vh', fontWeight: 'bold'}}>Our Story</div>
-                    <div className='mt-5'>
+                    <div className='mt-4'>
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, error. Minima atque perspiciatis mollitia explicabo nisi nam asperiores repellendus aspernatur, harum reprehenderit quos esse praesentium reiciendis ipsum ab facere totam!
                             Distinctio veniam, dicta reprehenderit deserunt, officia, doloremque iure fuga quaerat illo fugit modi! Mollitia, ducimus? Ab provident nulla nam, quasi corporis veniam magni, similique illo amet accusantium hic sint recusandae.
@@ -28,14 +28,14 @@ export const Story = () => {
                         
                     </div>
                 </Col>
-                <Col style={{height: '65vh', overflow: 'hidden'}}>
+                <Col className='ms-5' style={{height: '55vh', overflow: 'hidden'}}>
                     <Row>
                         {imageMenu.map((imageMenu, i)=>(
                             <Col sm={6} md={12} lg={6} xl={6} key={i}>
                                 <motion.div
                                     initial={{y: 0}}
-                                    style={{y : inView ? -210 : 0 }}
-                                    animate={{y : inView ? -210 : 0, 
+                                    style={{y : inView ? -220 : 0 }}
+                                    animate={{y : inView ? -230 : 0, 
                                     transition: { duration: 0.5, ease: 'easeOut'}}}
                                     transition={{ duration: 0.5 }}
                                 >
@@ -46,7 +46,7 @@ export const Story = () => {
                         ))}
                     </Row>
                 </Col>
-                <div ref={ref} className='mt-5'></div>
+                <div ref={ref} className='mt-4'></div>
                         
             </Row>
             
