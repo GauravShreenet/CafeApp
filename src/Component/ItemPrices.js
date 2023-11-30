@@ -13,6 +13,16 @@ const menuItems = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: '$17'
     },
+    {
+        title: "Food Item",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: '$17'
+    },
+    {
+        title: "Food Item",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: '$17'
+    },
 ]
 
 export const ItemPrices = () => {

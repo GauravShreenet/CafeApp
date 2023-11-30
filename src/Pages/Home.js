@@ -10,7 +10,7 @@ const Home = () => {
             <Hero />
             <Story />
             <ItemPrices />
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center mt-5'>
                 <div className='text-center' style={{ width: '30%' }}>
                     832 Anzac Parade, Maroubra NSW 2035, Australia<br /><br />
                     +61 (00) 0000000 | abc@abc.com<br /><br />
