@@ -9,16 +9,18 @@ export const Footer = () => {
             <div className='d-flex justify-content-center mt-3'>
                 <form style={{width: '50%'}}>
                     <Row>
-                        <Col xxl={10}>
-                            <div className="mb-3">
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email Address'/>
-                            </div>
+                        <Col xxl={9}>
+                             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email Address'/>
                         </Col>
-                        <Col className='d-grid'>
+                        <Col xxl={3} className='d-grid'>
                             <button type="submit" className="btn btn-light">Sign Up</button>
                         </Col>
                     </Row>
                 </form>
+                
+            </div>
+            <div className="py-5">
+                    &copy; All Right Reserved. Made by <a href='https://www.linkedin.com/in/gaurav-shreenet-7408081b6/' target='_blank'>Gaurav Shreenet</a>
             </div>
         </div>
 
