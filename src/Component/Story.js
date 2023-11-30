@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import firstImg from '../Asset/menuOne.png'
 import secondImg from '../Asset/menuTwo.png'
@@ -46,7 +46,7 @@ export const Story = () => {
                         ))}
                     </Row>
                 </Col>
-                <div ref={ref} className='mt-4'></div>
+                <div ref={ref}/>
                         
             </Row>
             
