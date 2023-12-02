@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import backGround from '../Asset/cafeback.png';
+import backGround from '../Asset/cafeback.jpg';
 import { Image } from 'react-bootstrap';
 import { motion, useAnimation, useInView, useScroll, useTransform } from 'framer-motion'
 
@@ -16,7 +16,7 @@ export const Hero = () => {
   }, [isInView])
 
   const { scrollY } = useScroll();
-  const scale = useTransform(scrollY, [0, 500], [1, 1.5]);
+  const scale = useTransform(scrollY, [0, 600], [1, 1.3]);
 
   return (
     <>
@@ -24,18 +24,21 @@ export const Hero = () => {
         <div className="overflow-hidden" style={{ position: 'sticky', top: '0%' }}>
           <motion.div style={{ scale: scale }}>
             <div ref={targetRef} style={{ height: '100vh', width: '100%', position: 'relative', transition: 'transform 0.2s ease-in-out' }}>
-              <Image src={backGround} alt="cafe" style={{ height: '100%', width: '100%' }} />
-              <div style={{ position: 'absolute', right: '30%', left: '35%', top: '30%' }}>
-                <div className='text-light d-flex justify-content-center' style={{ fontSize: '5vh' }}>Take-Out & Delivery</div>
-                <div className='text-light d-flex justify-content-center' style={{ fontSize: '5vh' }}>Breakfast, Lunch & Brunch</div><br />
-                <div className='text-light d-flex justify-content-center'>832 Anzac Parade, Maroubra NSW 2035, Australia</div>
+              <Image src={backGround} alt="cafe" style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+              <div className='d-flex justify-content-center' style={{ position: 'absolute', top: '30%', width: '100%' }}>
+                <div className='mx-5'>
+                  <div className='text-light d-flex justify-content-center display-6'>Take-Out & Delivery</div>
+                  <div className='text-light d-flex justify-content-center display-6'>Breakfast, Lunch & Brunch</div><br />
+                  <div className='text-light d-flex justify-content-center display-7'>832 Anzac Parade, Maroubra NSW 2035, Australia</div>
+                </div>
+
 
               </div>
             </div>
           </motion.div>
         </div>
 
-        <div ref={ref} style={{ width: '20%', position: 'absolute', top: '160%', left: '42.2%', display: 'inline-block', overflow: 'hidden' }}>
+        <div ref={ref} className='d-flex justify-content-center' style={{ position: 'absolute', top: '165%', display: 'inline-block', overflow: 'hidden', width: '100%'}}>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -46,13 +49,13 @@ export const Hero = () => {
             transition={{ duration: 0.4, delay: 0.25 }}
             className='d-flex justify-content-between text-light'
           >
-            <div className="d-flex flex-column fw-bold">
+            <div className="d-flex flex-column fw-bold me-3">
               <span style={{ fontSize: '2.5vh' }}>Monday to Firday</span>
               <span style={{ fontSize: '2.5vh' }}>Saturday</span>
               <span style={{ fontSize: '2.5vh' }}>Sunday</span>
             </div>
             <div style={{ background: 'white', width: '0.5vh' }} />
-            <div className="d-flex flex-column fw-bold">
+            <div className="d-flex flex-column fw-bold ms-3">
               <span style={{ fontSize: '2.5vh' }}>8am - 3pm</span>
               <span style={{ fontSize: '2.5vh' }}>8am - 3pm</span>
               <span style={{ fontSize: '2.5vh' }}>9am - 3pm</span>

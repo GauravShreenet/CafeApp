@@ -31,15 +31,15 @@ export const Story = () => {
                 <Col className='ms-5' style={{height: '55vh', overflow: 'hidden'}}>
                     <Row>
                         {imageMenu.map((imageMenu, i)=>(
-                            <Col sm={6} md={12} lg={6} xl={6} key={i}>
+                            <Col sm={6} md={12} lg={6} xl={6} xxl={6} key={i}>
                                 <motion.div
                                     initial={{y: 0}}
-                                    style={{y : inView ? -220 : 0 }}
+                                    style={{ height: '28vh' }}
                                     animate={{y : inView ? -230 : 0, 
                                     transition: { duration: 0.5, ease: 'easeOut'}}}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    <Image src={imageMenu} alt={`Image ${i}`} fluid className='mb-3'/>
+                                    <Image src={imageMenu} alt={`Image ${i}`} fluid className='mb-3' style={{height: '24vh'}}/>
                                 </motion.div>
                                 
                             </Col>
