@@ -49,16 +49,16 @@ export const Hero = () => {
             transition={{ duration: 0.4, delay: 0.25 }}
             className='d-flex justify-content-between text-light'
           >
-            <div className="d-flex flex-column fw-bold me-3">
-              <span style={{ fontSize: '2.5vh' }}>Monday to Firday</span>
-              <span style={{ fontSize: '2.5vh' }}>Saturday</span>
-              <span style={{ fontSize: '2.5vh' }}>Sunday</span>
+            <div className="d-flex flex-column fw-bold me-3 dispaly-7">
+              <span>Monday to Firday</span>
+              <span>Saturday</span>
+              <span>Sunday</span>
             </div>
             <div style={{ background: 'white', width: '0.5vh' }} />
             <div className="d-flex flex-column fw-bold ms-3">
-              <span style={{ fontSize: '2.5vh' }}>8am - 3pm</span>
-              <span style={{ fontSize: '2.5vh' }}>8am - 3pm</span>
-              <span style={{ fontSize: '2.5vh' }}>9am - 3pm</span>
+              <span>8am - 3pm</span>
+              <span>8am - 3pm</span>
+              <span>9am - 3pm</span>
             </div>
           </motion.div>
 

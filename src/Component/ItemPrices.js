@@ -54,7 +54,7 @@ export const ItemPrices = () => {
                         </Col>
                         <Col className='me-5'>
                         <h3 className='fw-bold text-capitalize my-3'>
-                                All day
+                                Brunch
                             </h3>
                             {
                                 menuItems.map((item, i) => (

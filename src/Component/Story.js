@@ -18,7 +18,7 @@ export const Story = () => {
     <>
         <Container className='my-5 overflow-hidden'>
             <Row>
-                <Col className='me-5 mt-5' style={{height: '60vh'}}>
+                <Col className='me-5 mt-5' style={{height: '60vh'}} md={6} sm={12}>
                     <div style={{ fontSize: '5vh', fontWeight: 'bold'}}>Our Story</div>
                     <div className='mt-4'>
                         <p>
