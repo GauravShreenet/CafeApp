@@ -38,7 +38,7 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        <div ref={ref} className='d-flex justify-content-center' style={{ position: 'absolute', top: '165%', display: 'inline-block', overflow: 'hidden', width: '100%'}}>
+        <div ref={ref} className='d-flex justify-content-center' style={{ position: 'absolute', top: '168%', display: 'inline-block', overflow: 'hidden', width: '100%'}}>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 75 },

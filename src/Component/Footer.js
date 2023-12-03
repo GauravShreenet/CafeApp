@@ -7,13 +7,13 @@ export const Footer = () => {
             <div className='fs-3 fw-bold pt-4'>Subscribe</div>
             <div>Sign up with your email address to receive news and updates.</div>
             <div className='d-flex justify-content-center mt-3'>
-                <Container>
-                <form style={{width: '100%'}}>
+                <Container className='d-flex justify-content-center'>
+                <form style={{width: '50%'}}>
                     <Row className='gap-1'>
-                        <Col xxl={9} lg={9}>
+                        <Col xxl={8} lg={8}>
                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email Address'/>
                         </Col>
-                        <Col xxl={2} lg={2} className='d-grid'>
+                        <Col xxl={3} lg={3} className='d-grid'>
                             <button type="submit" className="btn btn-light">Sign Up</button>
                         </Col>
                     </Row>
