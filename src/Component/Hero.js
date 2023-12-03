@@ -20,7 +20,7 @@ export const Hero = () => {
 
   return (
     <>
-      <div style={{ height: '200vh' }}>
+      <div style={{ height: '200svh' }}>
         <div className="overflow-hidden" style={{ position: 'sticky', top: '0%' }}>
           <motion.div style={{ scale: scale }}>
             <div ref={targetRef} style={{ height: '100vh', width: '100%', position: 'relative', transition: 'transform 0.2s ease-in-out' }}>
@@ -38,7 +38,7 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        <div ref={ref} className='d-flex justify-content-center' style={{ position: 'absolute', top: '170%', display: 'inline-block', overflow: 'hidden', width: '100%'}}>
+        <div ref={ref} className='d-flex justify-content-center' style={{ position: 'absolute', top: '168%', display: 'inline-block', overflow: 'hidden', width: '100%'}}>
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 75 },
