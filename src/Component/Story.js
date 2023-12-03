@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import firstImg from '../Asset/menuOne.png'
 import secondImg from '../Asset/menuTwo.png'
 import thirdImg from '../Asset/menuThree.png'
 import forthImg from '../Asset/menuFour.png'
+import fifthImg from '../Asset/menuFive.png'
+import sixthImg from '../Asset/menuSix.png'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
@@ -12,7 +14,40 @@ export const Story = () => {
     
     const { ref, inView } = useInView();
       
-    const imageMenu = [firstImg, secondImg, thirdImg, forthImg, firstImg, secondImg];
+    const imageMenu = [firstImg, secondImg, thirdImg, forthImg, fifthImg, sixthImg];
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [shouldAnimate, setShouldAnimate] = useState(true);
+    const [containerStyle, setContainerStyle] = useState({
+        height: '55vh',
+        overflow: 'hidden'
+    })
+
+    useLayoutEffect(()=>{
+        const updateWindowWidth = () => {
+            setWindowWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', updateWindowWidth);
+        return () => window.removeEventListener('resize', updateWindowWidth)
+    }, [])
+
+    useLayoutEffect(() => {
+        if (windowWidth <= 575) {
+            setShouldAnimate(false);
+            setContainerStyle({
+                height: 'auto',
+                overflow: 'visible',
+                
+            });
+        } else {
+            setShouldAnimate(true);
+            setContainerStyle({
+                height: '55vh',
+                overflow: 'hidden',
+                
+            });
+        }
+    }, [windowWidth])
 
   return (
     <>
@@ -28,14 +63,14 @@ export const Story = () => {
                         
                     </div>
                 </Col>
-                <Col className='ms-5' style={{height: '55vh', overflow: 'hidden'}}>
+                <Col style={containerStyle}>
                     <Row>
                         {imageMenu.map((imageMenu, i)=>(
-                            <Col sm={6} md={12} lg={6} xl={6} xxl={6} key={i}>
+                            <Col sm={12} md={12} lg={6} xl={6} xxl={6} key={i} className='d-flex justify-content-center'>
                                 <motion.div
                                     initial={{y: 0}}
                                     style={{ height: '28vh' }}
-                                    animate={{y : inView ? -230 : 0, 
+                                    animate={{y : shouldAnimate ? (inView ? -230 : 0) : 0, 
                                     transition: { duration: 0.5, ease: 'easeOut'}}}
                                     transition={{ duration: 0.5 }}
                                 >
